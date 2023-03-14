@@ -30,32 +30,6 @@ function changeIcon() {
 
 // Testimonial Slide
 
-const testimonialSlide = new Swiper(".testimonial__wrapper", {
-  loop: true,
-  spaceBetween: 30,
-  centeredSlides: true,
-  effect: "coverflow",
-  grabCursor: true,
-  slidesPerView: 1,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  breakpoints: {
-    520: {
-      slidesPerView: "auto",
-    },
-  },
-});
-
 // header scroll animation
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {
@@ -65,27 +39,146 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ScrollReveal animations
-const sr = ScrollReveal({
-  duration: 2000,
-  distance: "100px",
-  delay: 400,
-  reset: false,
-});
 
-sr.reveal(".hero__content, .about__content");
-sr.reveal(".hero__img", { origin: "top" });
 
-sr.reveal(
-  ".hero__info-wrapper, .skills__title, .skills__content, .qualification__name, .qualification__item, .service__card, .project__content, .testimonial__wrapper, .footer__content",
+let tech_stacks = [
   {
-    delay: 500,
-    interval: 100,
+      "teck_name": "Linux",
+      "img_link": "assets/img/linux-logo-logo-brands-for-0.png"
+    
+  },
+  {
+      "teck_name": "Shell Scripting",
+      "img_link": "assets/img/shell Scripting.png"
+  },
+  {
+      "teck_name": "MySQL",
+      "img_link": "assets/img/mysql.png"
+  },
+  {
+      "teck_name": "JavaScript",
+      "img_link": "assets/img/javascript.png"
+  },
+  {
+      "teck_name": "CSS",
+      "img_link": "assets/img/css.png"
+  },
+  {
+      "teck_name": "HTML",
+      "img_link": "assets/img/html.png"
+  },
+  {
+      "teck_name": "GitHub",
+      "img_link": "assets/img/github1233.png"
+  },
+  {
+      "teck_name": "VS code",
+      "img_link": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png"
   }
-);
 
-sr.reveal(".qualification__footer-text, .contact__content", {
-  origin: "left",
-});
+]
 
-sr.reveal(".qualification__footer .btn, .contact__btn", { origin: "right" });
+let techStackDiv = document.getElementById("tech");
+
+let custstackdiv = document.getElementById("customer")
+
+
+let softdiv = document.getElementById("soft")
+
+
+
+tech_stacks.map(tech => {
+
+
+  let comp = document.createElement("div");
+
+  let img = document.createElement("img");
+  img.src = tech.img_link;
+  img.alt = tech.teck_name;
+  img.className = "pic"
+  let name = document.createElement("p");
+  name.innerText = tech.teck_name;
+  name.className= "naav"
+
+  comp.append(img, name);
+
+  techStackDiv.append(comp);
+})
+
+let customer_stacks = [
+  {
+      "teck_name": "Active Listening",
+      "img_link": "assets/img/ActiveListening.png"
+    
+  },
+  {
+      "teck_name": "Adaptibility",
+      "img_link": "assets/img/Adaptibility.png"
+  },
+  {
+      "teck_name": "Customer Success",
+      "img_link": "assets/img/CustomerSuccess.jpg"
+  },
+  {
+      "teck_name": "Technical Assistance",
+      "img_link": "assets/img/Technical assistance.png"
+  }
+
+]
+
+customer_stacks.map(tech => {
+
+
+  let comp = document.createElement("div");
+
+  let img = document.createElement("img");
+  img.src = tech.img_link;
+  img.alt = tech.teck_name;
+  img.className = "pic"
+  let name = document.createElement("p");
+  name.innerText = tech.teck_name;
+  name.className= "naav"
+
+  comp.append(img, name);
+
+  custstackdiv.append(comp);
+})
+
+let soft_stacks = [
+  {
+      "teck_name": "Time Management",
+      "img_link": "assets/img/time management.png"
+    
+  },
+  {
+      "teck_name": "Team Building",
+      "img_link": "assets/img/team building.png"
+  },
+  {
+      "teck_name": "Decision Making",
+      "img_link": "assets/img/decision making.png"
+  },
+  {
+      "teck_name": "Critical Thinking",
+      "img_link": "assets/img/critical thinking.png"
+  }
+
+]
+
+soft_stacks.map(tech => {
+
+
+  let comp = document.createElement("div");
+
+  let img = document.createElement("img");
+  img.src = tech.img_link;
+  img.alt = tech.teck_name;
+  img.className = "pic"
+  let name = document.createElement("p");
+  name.innerText = tech.teck_name;
+  name.className= "naav"
+
+  comp.append(img, name);
+
+  softdiv.append(comp);
+})
