@@ -716,12 +716,21 @@ body {
 }
 
 #icons {
+  /* display: flex; */
+  justify-content: space-evenly;
+  width: fit-content;
+}
+#icons a{
+  align-items: center;
+  margin-right: 20px;
   display: flex;
-  gap:10px
+  margin-bottom: 20px;
+  width: fit-content;
 }
 ion-icon{
   height: 50px;
-  width: 50px
+  width: 50px;;
+
 }
  .meg{
   display: flex;
@@ -794,6 +803,9 @@ ion-icon{
     grid-template-columns: repeat(2, 1fr);
 
   } */
+  #icons {
+    flex-direction:column-reverse;
+  }
 
 }
 
@@ -818,6 +830,9 @@ ion-icon{
 
   .hero__img {
     justify-self: flex-end;
+  }
+  #icons {
+    flex-direction:column-reverse;
   }
 
 }
@@ -858,6 +873,9 @@ ion-icon{
 
   .footer__wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #icons {
+    flex-flow:column-reverse;
   }
 }
 
