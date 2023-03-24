@@ -829,7 +829,10 @@ ion-icon{
   }
 
   .hero__img {
+    margin-left: 20px;
     justify-self: flex-end;
+    border-radius: 50%;
+    border: 7px solid #25ab75;
   }
   #icons {
     flex-direction:column-reverse;
@@ -875,7 +878,8 @@ ion-icon{
     grid-template-columns: repeat(3, 1fr);
   }
   #icons {
-    flex-flow:column-reverse;
+    display:grid;
+    grid-template-columns: repeat(4,169px);
   }
 }
 
